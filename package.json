@@ -29,7 +29,8 @@
     "sinon": "^1.15.4",
     "unexpected": "^9.2.1",
     "unexpected-dom": "^1.2.0",
-    "unexpected-sinon": "^6.4.1"
+    "unexpected-sinon": "^6.4.1",
+    "webpack": "^1.10.3"
   },
   "peerDependencies": {
     "react": ">=0.13.3"
@@ -51,7 +52,8 @@
     "release": "gulp release",
     "start": "gulp dev",
     "test": "mocha --compilers js:babel/register",
-    "watch": "gulp watch:lib"
+    "watch": "gulp watch:lib",
+    "build-umd": "webpack --config webpack-config.js --output-library 'react-select' --output-library-target umd . ./dist/react-select.umd.js"
   },
   "keywords": [
     "combobox",
